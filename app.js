@@ -6,6 +6,9 @@ const task = document.querySelector('.task')
 const projectPreview = document.querySelector('main');
 const addTaskBtn = document.querySelector('.button2');
 const addBtn = document.querySelector('.add');
+const cancelBtn = document.querySelector('.button4');
+const inputBox = document.querySelector('.input');
+const add = document.querySelector('.add');
 
 //Shows element after pressing add task//
 const showElements = () => {
@@ -21,27 +24,44 @@ const showElements = () => {
     task2.style.display = "none";
 }
 
+//Add ta
 const addTask = () => {
 
     const taskList = document.querySelector('.task-list');
     const inputValue = document.querySelector('.input').value;
-    const cancelBtn = document.querySelector('.button3');
+    const inputValue2 = document.querySelector('.input')
+    const cancelBtn = document.querySelector('.button4');
     const list = document.createElement('li');
     taskList.style.display = "block";
     list.innerHTML = inputValue;
     taskList.appendChild(list);
-    inputValue.style.display = "none";
-    cancelBtn.style.display = "none";
 
 
 }
 
 const addProject = () => {
-    const input = document.createElement('input')
+    const input2 = document.querySelector('.input2');
+    const addBtn = document.querySelector('.addBtn');
+    const cancelBtn = document.querySelector('.cancelBtn');
+    const addProject = document.querySelector('.add');
+
+    addProject.style.display = "none";
+    input2.style.display = "block";
+    cancelBtn.style.display = "block";
+    addBtn.style.display = "block";
+    
+}
+
+const cancel = () => {
+ cancelBtn.style.display = "none";
+ inputBox.style.display = "none"
+
 }
 
 task.addEventListener('click', showElements);
 addTaskBtn.addEventListener('click', addTask);
+cancelBtn.addEventListener('click', cancel);
+add.addEventListener('click', addProject);
 
 bar.addEventListener('click', (e) => {
     if (nav.style.display === "none") {
