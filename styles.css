@@ -73,7 +73,7 @@ button{
 nav{
  display: none;
  height: 300px;
- width: 500px;
+ width: 420px;
  background-color: #ddd;
  padding: 20px;
 }
@@ -131,17 +131,7 @@ nav{
   align-items: center;
   flex-direction: column;
 }
-.addBtn{
-    display: none;
-}
 
-.cancelBtn{
- display: none;
-}
-
-.input2{
- display: none;
-}
 .addButton2{
  display: flex;
  width: 100px;
@@ -159,8 +149,6 @@ nav{
 .hidden-input{
  display: none;
 }
-
-
 
 .buttons{
   display: none;
